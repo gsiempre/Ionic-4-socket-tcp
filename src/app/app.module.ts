@@ -8,6 +8,8 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { TcpService } from './controler/tcp.service';
+import { Rutinas } from './controler/rutinas';
 
 @NgModule({
   declarations: [AppComponent],
@@ -16,6 +18,8 @@ import { AppRoutingModule } from './app-routing.module';
   providers: [
     StatusBar,
     SplashScreen,
+    TcpService,
+    Rutinas,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

@@ -13,8 +13,22 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-item>
+    <ion-label position="floating">Conectar a Ip: </ion-label>
+    <ion-input type="text" [(ngModel)]='this.ip'></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Puerto: </ion-label>
+    <ion-input type="number" [(ngModel)]='this.port'></ion-input>
+  </ion-item>
+
+  <ion-button expand="full" fill="outline" (click)='conectar();'>Conectar</ion-button>
+
+  <ion-item>
+    <ion-label position="floating">Mensaje: </ion-label>
+    <ion-textarea [(ngModel)]='this.mensaje'></ion-textarea>
+  </ion-item>
+
+  <ion-button expand="full" fill="outline" (click)='enviarMensaje();'>Enviar</ion-button>
+
 </ion-content>
